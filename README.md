@@ -25,42 +25,34 @@ This is a web system developed in Python using the Django framework for managing
 
    ```bash
    git clone https://github.com/your-username/condominium-manager.git
-Install dependencies:
+### Install dependencies:
 
-bash
-Copy code
-pip install -r requirements.txt
-Run migrations:
+# bash
+-Copy code
+-pip install -r requirements.txt
+-Run migrations:
 
-bash
-Copy code
-python manage.py migrate
-Create a superuser to access the administrative area:
+### bash
+-Copy code
+-python manage.py migrate
+-Create a superuser to access the administrative area:
 
-bash
-Copy code
-python manage.py createsuperuser
+### bash
+-Copy code
+-python manage.py createsuperuser
 Run the development server:
+-
+### bash
+-Copy code
+-python manage.py runserver
+-Access the system via the browser at http://127.0.0.1:8000/ and the administrative area at http://127.0.0.1:8000/admin/.
 
-bash
-Copy code
-python manage.py runserver
-Access the system via the browser at http://127.0.0.1:8000/ and the administrative area at http://127.0.0.1:8000/admin/.
+###Contributions
+-Contributions are welcome! Feel free to open issues, propose improvements, or send pull requests to this project.
 
-Customization
-Template Customization:
+### License
+-This project is licensed under the MIT License - see the LICENSE file for details.
 
-Modify HTML files in the templates folder to adjust the layout according to your needs.
-Styling:
 
-Customize CSS styles in the static/css folder to adapt the system's appearance.
-Contributions
-Contributions are welcome! Feel free to open issues, propose improvements, or send pull requests to this project.
 
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-perl
-Copy code
-
-Crie um novo arquivo chamado `README.md` na raiz do seu projeto e cole 
+ 
