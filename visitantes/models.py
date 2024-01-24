@@ -1,6 +1,6 @@
 from django.db import models
 
-class Visitantes(models.Model):
+class Visitante(models.Model):
     
     nome_completo = models.CharField(
     verbose_name = "Nome completo",
@@ -12,11 +12,9 @@ class Visitantes(models.Model):
         max_length = 11
     )
     
-    data_nascimento = models.CharField(
-        verbose_name = "Data de nascimento",
-        auto_now_add = False,
-        auto_now = False
-    )
+    data_nascimento = models.DateField( verbose_name = "Data de nascimento", auto_now=False, auto_now_add=False)
+       
+    
     
     numero_casa = models.PositiveBigIntegerField(
         verbose_name = "Número da casa a ser visitada",
