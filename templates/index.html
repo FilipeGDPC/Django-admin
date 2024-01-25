@@ -11,6 +11,9 @@
     {% for message in messages %}
         <div class="alert alert-dismissible alert-{{ message.tags }}" role="alert">
             {{ message }}
+        </div>
+        {% endfor %}
+    {% endif %}
 
     <div class="row">
         <div class="col-xl-3 col-md-6 mb-4">
