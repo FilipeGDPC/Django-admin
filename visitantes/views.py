@@ -28,3 +28,11 @@ def registrar_visitante(request):
     }
     
     return render(request, "registrar_visitante.html", context)
+
+def informacoes_visitantes(request, id):
+    
+    context = {
+        "nome_pagina": "Informações de visitante",
+    }
+    
+    return render(request, "informacoes_visitante.html", context)
