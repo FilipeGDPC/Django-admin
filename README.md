@@ -40,8 +40,8 @@ This is a web system developed in Python using the Django framework for managing
 ### bash
 -Copy code
 -python manage.py createsuperuser
-Run the development server:
--
+-Run the development server:
+
 ### bash
 -Copy code
 -python manage.py runserver
