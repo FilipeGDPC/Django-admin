@@ -33,7 +33,7 @@ def registrar_visitante(request):
     
     return render(request, "registrar_visitante.html", context)
 
-def informacoes_visitantes(request, id):
+def informacoes_visitante(request, id):
     
     visitante = get_object_or_404(
         Visitante,
@@ -46,3 +46,5 @@ def informacoes_visitantes(request, id):
     }
     
     return render(request, "informacoes_visitante.html", context)
+
+
