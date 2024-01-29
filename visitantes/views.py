@@ -48,3 +48,5 @@ def informacoes_visitante(request, id):
     return render(request, "informacoes_visitante.html", context)
 
 
+
+

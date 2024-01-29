@@ -178,10 +178,7 @@
                             Realmente deseja encerrar a visita?
                         </h5>
 
-                        <form method="post" action="{% url 'finalizar_visita' token=visitante.token %}">
-                            {% csrf_token %}
-
-                            <input hidden>
+                       
 
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
