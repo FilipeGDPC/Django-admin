@@ -23,7 +23,7 @@ urlpatterns = [
     ),
     
     path(
-        "visitante/<int:id>/",
+        "visitantes/<int:id>/",
         informacoes_visitante,
         name = "informacoes_visitante"
     ),
