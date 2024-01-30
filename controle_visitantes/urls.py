@@ -29,7 +29,7 @@ urlpatterns = [
     ),
     
     path(
-        "visitantes/<int:id>/finalizar-visita",
+        "visitantes/<int:id>/finalizar-visita/",
         finalizar_visita,
         name = "finalizar_visita"
         

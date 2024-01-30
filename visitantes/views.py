@@ -77,15 +77,15 @@ def informacoes_visitante(request, id):
 def finalizar_visita(request, id):
     
     if request.method == "POST":
-        Visitante = get_object_or_404(
+        visitante = get_object_or_404(
             Visitante,
             id=id
         )
         
-        Visitante.status = "FINALIZADO"
-        Visitante.horario_saida = timezone.now()
+        visitante.status = "FINALIZADO"
+        visitante.horario_saida = timezone.now()
         
-        Visitante.save()
+        visitante.save()
         
         messages.success(
           request,
