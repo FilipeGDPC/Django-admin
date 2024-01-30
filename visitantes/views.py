@@ -74,6 +74,24 @@ def informacoes_visitante(request, id):
     
     return render(request, "informacoes_visitante.html", context)
 
-
+def finalizar_visita(request, id):
+    
+    if request.method == "POST":
+        Visitante = get_object_or_404(
+            Visitante,
+            id=id
+        )
+        
+        Visitante.status = "FINALIZADO"
+        Visitante.horario_saida = timezone.now()
+        
+        Visitante.save()
+        
+        messages.success(
+          request,
+          "Visita finalizada com sucesso"
+        )
+        
+        return redirect("index")
 
 
