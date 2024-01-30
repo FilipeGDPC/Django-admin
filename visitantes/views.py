@@ -6,6 +6,7 @@ from visitantes.models import Visitante
 from visitantes.forms import (
     VisitanteForm, AutorizaVisitanteForm
 )
+from django.utils import timezone
 
 def registrar_visitante(request):
     
@@ -53,6 +54,7 @@ def informacoes_visitante(request, id):
             visitante= form.save(commit=False)
             
             visitante.status = "EM_VISITA"
+            visitante.horario_autorizacao = timezone.now()
             
             visitante.save()
             
