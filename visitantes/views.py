@@ -2,6 +2,9 @@ from django.contrib import messages
 from django.shortcuts import (
     render, redirect, get_object_or_404
 )
+
+from django.http import HttpResponseNotAllowed
+
 from visitantes.models import Visitante
 from visitantes.forms import (
     VisitanteForm, AutorizaVisitanteForm
@@ -93,5 +96,11 @@ def finalizar_visita(request, id):
         )
         
         return redirect("index")
+    
+    else:
+        return HttpResponseNotAllowed(
+            ["POST"],
+            "Método não permitido"
+        )
 
 
