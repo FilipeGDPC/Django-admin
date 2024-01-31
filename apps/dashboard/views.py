@@ -18,6 +18,9 @@ def index(request):
         status = "FINALIZADO"
     )
     
+    visitantes_mes = todos_visitantes.filter(
+        horario_chegada = ""
+    )
     
     context = {
         "nome_pagina": "Início da dashboard",
