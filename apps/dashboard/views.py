@@ -6,7 +6,9 @@ from django.utils import timezone
 
 def index(request):
     
-    todos_visitantes = Visitante.objects.all()
+    todos_visitantes = Visitante.objects.order_by(
+        "-horario_chegada"
+    )
     
     visitantes_aguardando = todos_visitantes.filter(
         status = "AGUARDANDO"
@@ -24,7 +26,7 @@ def index(request):
     mes_atual = hora_atual.month
     
     visitantes_mes = todos_visitantes.filter(
-        horario_chegada__month = "mes_atual"
+        horario_chegada__month = mes_atual
     )
     
     context = {
