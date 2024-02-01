@@ -3,15 +3,12 @@ from django.urls import path
 
 from django.contrib.auth import views as auth_views
 
-from dashboard.views import index
-
-from visitantes.views import (
-    registrar_visitante, informacoes_visitante, finalizar_visita
-)
+import dashboard.views
+import visitantes.views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    
+
     path(
         "login/",
         auth_views.LoginView.as_view(
@@ -19,7 +16,7 @@ urlpatterns = [
         ),
         name="login"
     ),
-    
+
     path(
         "logout/",
         auth_views.LogoutView.as_view(
@@ -27,30 +24,28 @@ urlpatterns = [
         ),
         name="logout"
     ),
-    
 
     path(
         "",
-        index,
-        name="index",        
+        dashboard.views.index,
+        name="index",
     ),
-    
+
     path(
-        "registrar-visitante/",
-        registrar_visitante,
-        name = "registrar_visitante"
+        "registrar-vistante/",
+        visitantes.views.registrar_visitante,
+        name="registrar_visitante",
     ),
-    
+
     path(
-        "visitantes/<int:id>/",
-        informacoes_visitante,
-        name = "informacoes_visitante"
+        "visitantes/<uuid:token>/",
+        visitantes.views.informacoes_visitante,
+        name="informacoes_visitante",
     ),
-    
+
     path(
-        "visitantes/<int:id>/finalizar-visita/",
-        finalizar_visita,
-        name = "finalizar_visita"
-        
-    ),
+        "visitantes/<uuid:token>/finalizar-visita/",
+        visitantes.views.finalizar_visita,
+        name="finalizar_visita"
+    )
 ]
