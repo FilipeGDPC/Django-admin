@@ -30,13 +30,13 @@ urlpatterns = [
     ),
 
     path(
-        "visitantes/<uuid:token>/",
+        "visitantes/<int:id>/",
         visitantes.views.informacoes_visitante,
         name="informacoes_visitante",
     ),
 
     path(
-        "visitantes/<uuid:token>/finalizar-visita/",
+        "visitantes/<int:id>/finalizar-visita/",
         visitantes.views.finalizar_visita,
         name="finalizar_visita"
     )
