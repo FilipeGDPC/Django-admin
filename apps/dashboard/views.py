@@ -20,7 +20,7 @@ def index(request):
     )
     
     visitantes_finalizado = todos_visitantes.filter(
-        status = "FINALIZADO"
+        status = "FINALIZADO" 
     )
     
     hora_atual = timezone.now()
